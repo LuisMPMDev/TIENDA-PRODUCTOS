@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Crear Pedido</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="js/admin-core.js"></script>
+</head>
+
+<body id="page-top" data-modulo="pedidos" data-pagina="crear">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" id="titulo">Crear Pedido</h1>
+                        <a href="listado-pedidos.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-list fa-sm text-white-50"></i> Listado </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <form id="formulario-pedido">
+                                <div class="form-group mb-4">
+                                    <label for="id_cliente">Cliente</label>
+                                    <select id="id_cliente" class="form-control" required>
+                                        <option value="">Seleccionar Cliente</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label for="metodo_pago">Método de Pago</label>
+                                    <select id="metodo_pago" class="form-control" required>
+                                        <option value="">Seleccionar Método de Pago</option>
+                                        <option value="Efectivo">Efectivo</option>
+                                        <option value="Contraentrega">Contraentrega</option>
+                                        <option value="PSE">PSE</option>
+                                        <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+                                        <option value="Transferencia">Transferencia</option>
+                                        <option value="Nequi">Nequi</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label for="estado">Estado</label>
+                                    <select id="estado" class="form-control"></select>
+                                </div>
+
+                                <h5>Productos del Pedido</h5>
+                                <div class="form-row mb-3">
+                                    <div class="col-md-6">
+                                        <select id="id_producto" class="form-control">
+                                            <option value="">Seleccionar producto</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="number" id="cantidad" class="form-control" value="1" min="1" step="1">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" id="btn-agregar" class="btn btn-success btn-block">Agregar</button>
+                                    </div>
+                                </div>
+                                <table class="table" id="tabla-carrito">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Producto</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th>Subtotal</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                                <div class="form-group mb-4">
+                                    <label for="descuento">Descuento ($)</label>
+                                    <input type="number" id="descuento" class="form-control" value="0" min="0" />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="aumento">Aumento / Envío ($)</label>
+                                    <input type="number" id="aumento" class="form-control" value="0" min="0" />
+                                </div>
+
+                                <div class="alert alert-info" role="alert">
+                                    <h5 class="mb-0">Total a Pagar: <span id="total-pedido">$0</span></h5>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block mb-4" id="btn-guardar">Crear Pedido</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; Tienda de Comidas 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>Admin.render();</script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/pedidos.js"></script>
+</body>
+
+</html>

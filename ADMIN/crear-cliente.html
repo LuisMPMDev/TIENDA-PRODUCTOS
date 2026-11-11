@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Crear Cliente</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="js/admin-core.js"></script>
+</head>
+
+<body id="page-top" data-modulo="clientes" data-pagina="crear">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" id="titulo">Crear Cliente</h1>
+                        <a href="listado-clientes.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-list fa-sm text-white-50"></i> Listado </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form id="formulario-cliente">
+                                <div class="form-group mb-4">
+                                    <label for="nombre-cli">Nombre</label>
+                                    <input type="text" id="nombre-cli" class="form-control" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="apellido-cli">Apellido</label>
+                                    <input type="text" id="apellido-cli" class="form-control" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="email-cli">Email</label>
+                                    <input type="email" id="email-cli" class="form-control" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="celular-cli">Celular</label>
+                                    <input type="text" id="celular-cli" class="form-control" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="direccion-cli">Dirección</label>
+                                    <input type="text" id="direccion-cli" class="form-control" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="direccion2-cli">Dirección 2 (opcional)</label>
+                                    <input type="text" id="direccion2-cli" class="form-control" />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="descripcion-cli">Descripción / Notas (opcional)</label>
+                                    <textarea class="form-control" id="descripcion-cli" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mb-4" id="btn-guardar">Crear Cliente</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; Tienda de Comidas 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>Admin.render();</script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/clientes.js"></script>
+</body>
+
+</html>

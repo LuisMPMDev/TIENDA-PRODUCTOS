@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Crear Usuario</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="js/admin-core.js"></script>
+</head>
+
+<body id="page-top" data-modulo="usuarios" data-pagina="crear">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" id="titulo">Crear Usuario</h1>
+                        <a href="listado-usuarios.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-list fa-sm text-white-50"></i> Listado </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form id="formulario-usuario">
+                                <div class="form-group mb-4">
+                                    <label for="rol">Rol</label>
+                                    <select id="rol" class="form-control" required>
+                                        <option value="">Seleccionar Rol</option>
+                                        <option value="administrador">Administrador</option>
+                                        <option value="vendedor">Vendedor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="usuario">Nombre Usuario</label>
+                                    <input type="text" id="usuario" class="form-control" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="contrasena">Contraseña</label>
+                                    <input type="password" id="contrasena" class="form-control" required />
+                                    <small class="form-text" id="ayuda-contrasena"></small>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="confirmar_contrasena">Confirmar Contraseña</label>
+                                    <input type="password" id="confirmar_contrasena" class="form-control" required />
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mb-4" id="btn-guardar">Crear Usuario</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; Tienda de Comidas 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>Admin.render();</script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/usuarios.js"></script>
+</body>
+
+</html>

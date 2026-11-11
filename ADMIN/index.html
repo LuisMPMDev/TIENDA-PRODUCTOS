@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Dashboard</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="js/admin-core.js"></script>
+</head>
+
+<body id="page-top" data-modulo="dashboard" data-pagina="dashboard">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2"><div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Productos</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="total-productos">0</div>
+                                    </div>
+                                    <div class="col-auto"><i class="fas fa-box fa-2x text-gray-300"></i></div>
+                                </div>
+                            </div></div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2"><div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Clientes</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="total-clientes">0</div>
+                                    </div>
+                                    <div class="col-auto"><i class="fas fa-users fa-2x text-gray-300"></i></div>
+                                </div>
+                            </div></div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2"><div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Pedidos</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="total-pedidos">0</div>
+                                    </div>
+                                    <div class="col-auto"><i class="fas fa-shopping-cart fa-2x text-gray-300"></i></div>
+                                </div>
+                            </div></div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2"><div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Ventas (sin cancelados)</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="total-ventas">$0</div>
+                                    </div>
+                                    <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
+                                </div>
+                            </div></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-5 mb-4">
+                            <div class="card shadow">
+                                <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">Pedidos por estado</h6></div>
+                                <div class="card-body" id="por-estado"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 mb-4">
+                            <div class="card shadow">
+                                <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">Últimos pedidos</h6></div>
+                                <div class="card-body table-responsive">
+                                    <table class="table mb-0">
+                                        <thead><tr><th>#</th><th>Cliente</th><th>Fecha</th><th>Total</th><th>Estado</th></tr></thead>
+                                        <tbody id="ultimos-pedidos"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; Tienda de Comidas 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>Admin.render();</script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

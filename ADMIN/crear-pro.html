@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin - Crear Producto</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="js/admin-core.js"></script>
+</head>
+
+<body id="page-top" data-modulo="productos" data-pagina="crear">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" id="titulo">Crear Producto</h1>
+                        <a href="listado-pro.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-list fa-sm text-white-50"></i> Listado </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="formulario-producto">
+                                <div class="form-group mb-4">
+                                    <label for="productos-select">Producto</label>
+                                    <select id="productos-select" class="form-control" required>
+                                        <option value="" selected>Seleccionar un producto</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="precio-pro">Precio ($)</label>
+                                    <input type="number" id="precio-pro" class="form-control" min="1" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="stock-pro">Stock</label>
+                                    <input type="number" id="stock-pro" class="form-control" min="0" step="1" required />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="descripcion-pro">Descripción</label>
+                                    <textarea class="form-control" id="descripcion-pro" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mb-4" id="btn-guardar">Crear Producto</button>
+                            </form>
+                        </div>
+                        <div class="col-md-5">
+                            <img id="imagen-pro" src="https://m.media-amazon.com/images/I/61XV8PihCwL._SY250_.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; Tienda de Comidas 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>Admin.render();</script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+
+</html>
