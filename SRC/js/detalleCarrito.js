@@ -153,11 +153,11 @@ destino.addEventListener("change", ()=>{
 //evento al boton pagar para guardar el resumen de la compra en localStorage
 btnResumen.addEventListener("click", ()=>{
     //extraer los productos de localStorage
-    let todosProductos = JSON.parse(localStorage.getItem("pro-carrito")) || [];
+    let prodcutos = JSON.parse(localStorage.getItem("pro-carrito")) || [];
     let resumen = {
         //copiar todos los productos
-        ...todosProductos,
-    }
+        "productos" : prodcutos,
+    };
     //llenar la varibale resumen con lainformacion del resumen de la compra
     resumen.subtotal = resumenSubTotal.textContent;
     resumen.descuento = resumenDescuento.textContent;

@@ -65,8 +65,8 @@
      <h2 class="page-title text-center my-5 py-3" style="background-color: #ffc800;">PEDIDO EN PROCESO</h2>
      <div class="page-content">
         <div class="resumen-compra col-xxl-8 col-lg-8 col-md-8 col-sm-10 offset-xxl-2 offset-lg-2 offset-md-2 offset-sm-1">
-            <h5 class="mb-16"><span>Cliente!</span>Muchas Gracias por tu compra</h5>
-            <p>Orden #000</p>
+            <h5 class="mb-16"><span class="cliente-nombre">Cliente</span>! Muchas Gracias por tu compra</h5>
+            <p>Orden #<span class="orden-numero">000</span></p>
             <p class="mb-32">Estamos preparando tu pedido, pronto nos comunicaremos contigo para realizar la entrega.</p>
             <div class="card my-5">
               <div class="card-header">Resumen de tu compra</div>
@@ -74,24 +74,30 @@
                 <div class="col-sm-6 mb-3 mb-sm-0">
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Productos</h5>
+                      <div class="productos-pedido">
+                        <!-- aqui van productos -->
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Datos de entrega</h5>
+                      <p class="card-text datos-entrega">
+                        <!-- aqui van datos del cliente -->
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card-footer">
-                Card footer
+                <p class="mb-1">Subtotal: $<span class="pedido-subtotal"></span></p>
+                <p class="mb-1">Domicilio (<span class="pedido-destino"></span>): $<span class="pedido-domicilio"></span></p>
+                <p class="mb-1">Descuento: $<span class="pedido-descuento"></span></p>
+                <p class="mb-1">Recargo <span class="pedido-metodo"></span>: $<span class="pedido-recargo"></span></p>
+                <h5 class="mb-0">Total: $<span class="pedido-total"></span></h5>
               </div>
             </div>
             <button type="button" class="btn-gracias cus-btn dark w-100 mb-32">
